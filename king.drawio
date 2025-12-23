@@ -1,0 +1,252 @@
+<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36 Edg/143.0.0.0" version="29.2.9">
+  <diagram name="Page-1" id="uWn-Iy1iVFfFO9iyA34e">
+    <mxGraphModel dx="778" dy="460" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="3DUoAErpp2HVaNnBFf6h-1" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fontSize=13;labelBackgroundColor=none;" value="Initialize the new Disk&lt;div&gt;# pvcreate /dev/sdc&lt;/div&gt;" vertex="1">
+          <mxGeometry height="50" width="200" x="215" y="340" as="geometry" />
+        </mxCell>
+        <mxCell id="3DUoAErpp2HVaNnBFf6h-2" parent="1" style="ellipse;whiteSpace=wrap;html=1;fontSize=13;labelBackgroundColor=none;" value="Migrate LV from one PV&lt;div&gt;to another PV&lt;/div&gt;" vertex="1">
+          <mxGeometry height="40" width="230" x="195" y="90" as="geometry" />
+        </mxCell>
+        <mxCell id="3DUoAErpp2HVaNnBFf6h-3" parent="1" style="rounded=0;whiteSpace=wrap;html=1;labelBackgroundColor=none;" value="Adding the initialized disk&amp;nbsp;&lt;div&gt;to the existing volume group&lt;/div&gt;&lt;div&gt;# vgextend vgdata /dev/sdc&lt;/div&gt;" vertex="1">
+          <mxGeometry height="50" width="200" x="215" y="440" as="geometry" />
+        </mxCell>
+        <mxCell id="3DUoAErpp2HVaNnBFf6h-4" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fontSize=13;labelBackgroundColor=none;" value="Verify the PV that we have added&lt;div&gt;# pvs&lt;/div&gt;" vertex="1">
+          <mxGeometry height="50" width="200" x="215" y="540" as="geometry" />
+        </mxCell>
+        <mxCell id="3DUoAErpp2HVaNnBFf6h-5" parent="1" style="rhombus;whiteSpace=wrap;html=1;fontSize=13;labelBackgroundColor=none;" value="Identify&lt;div&gt;&amp;nbsp;current volume&lt;/div&gt;&lt;div&gt;&amp;nbsp;group&lt;/div&gt;&lt;div&gt;&lt;div&gt;and PVs&lt;/div&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="110" width="130" x="250" y="170" as="geometry" />
+        </mxCell>
+        <mxCell id="3DUoAErpp2HVaNnBFf6h-6" edge="1" parent="1" source="3DUoAErpp2HVaNnBFf6h-2" style="endArrow=classic;html=1;rounded=0;exitX=0.53;exitY=0.978;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;labelBackgroundColor=none;fontColor=default;" target="3DUoAErpp2HVaNnBFf6h-5" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="330" y="310" as="sourcePoint" />
+            <mxPoint x="380" y="260" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="3DUoAErpp2HVaNnBFf6h-7" edge="1" parent="1" source="3DUoAErpp2HVaNnBFf6h-5" style="endArrow=classic;html=1;rounded=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;labelBackgroundColor=none;fontColor=default;" target="3DUoAErpp2HVaNnBFf6h-1" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="330" y="310" as="sourcePoint" />
+            <mxPoint x="380" y="260" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="3DUoAErpp2HVaNnBFf6h-8" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;labelBackgroundColor=none;" value="Yes" vertex="1">
+          <mxGeometry height="30" width="60" x="270" y="280" as="geometry" />
+        </mxCell>
+        <mxCell id="3DUoAErpp2HVaNnBFf6h-9" edge="1" parent="1" source="3DUoAErpp2HVaNnBFf6h-5" style="endArrow=classic;html=1;rounded=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=-0.033;entryY=0.633;entryDx=0;entryDy=0;entryPerimeter=0;labelBackgroundColor=none;fontColor=default;" target="3DUoAErpp2HVaNnBFf6h-11" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="370" y="380" as="sourcePoint" />
+            <mxPoint x="470" y="230" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="3DUoAErpp2HVaNnBFf6h-10" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;labelBackgroundColor=none;" value="No" vertex="1">
+          <mxGeometry height="30" width="60" x="375" y="170" as="geometry" />
+        </mxCell>
+        <mxCell id="3DUoAErpp2HVaNnBFf6h-11" parent="1" style="rounded=0;whiteSpace=wrap;html=1;labelBackgroundColor=none;" value="Scan SCSI properly" vertex="1">
+          <mxGeometry height="60" width="120" x="435" y="130" as="geometry" />
+        </mxCell>
+        <mxCell id="3DUoAErpp2HVaNnBFf6h-12" edge="1" parent="1" source="3DUoAErpp2HVaNnBFf6h-11" style="endArrow=classic;html=1;rounded=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;exitX=0.578;exitY=0.989;exitDx=0;exitDy=0;exitPerimeter=0;labelBackgroundColor=none;fontColor=default;" target="3DUoAErpp2HVaNnBFf6h-14" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="540" y="200" as="sourcePoint" />
+            <mxPoint x="530" y="230" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="3DUoAErpp2HVaNnBFf6h-13" edge="1" parent="1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;labelBackgroundColor=none;fontColor=default;">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="530" y="290" as="sourcePoint" />
+            <mxPoint x="530" y="290" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="3DUoAErpp2HVaNnBFf6h-14" parent="1" style="rhombus;whiteSpace=wrap;html=1;fontSize=13;labelBackgroundColor=none;" value="Desired&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;&amp;nbsp;output&lt;/span&gt;" vertex="1">
+          <mxGeometry height="60" width="130" x="440" y="240" as="geometry" />
+        </mxCell>
+        <mxCell id="3DUoAErpp2HVaNnBFf6h-15" edge="1" parent="1" source="3DUoAErpp2HVaNnBFf6h-14" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;labelBackgroundColor=none;fontColor=default;" target="3DUoAErpp2HVaNnBFf6h-14">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="3DUoAErpp2HVaNnBFf6h-16" edge="1" parent="1" source="3DUoAErpp2HVaNnBFf6h-14" style="endArrow=classic;html=1;rounded=0;entryX=0.825;entryY=0;entryDx=0;entryDy=0;entryPerimeter=0;exitX=0;exitY=0.5;exitDx=0;exitDy=0;labelBackgroundColor=none;fontColor=default;" target="3DUoAErpp2HVaNnBFf6h-1" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <Array as="points">
+              <mxPoint x="390" y="270" />
+            </Array>
+            <mxPoint x="440" y="300" as="sourcePoint" />
+            <mxPoint x="490" y="250" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="3DUoAErpp2HVaNnBFf6h-17" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;labelBackgroundColor=none;" value="yes" vertex="1">
+          <mxGeometry height="30" width="60" x="390" y="250" as="geometry" />
+        </mxCell>
+        <mxCell id="3DUoAErpp2HVaNnBFf6h-18" edge="1" parent="1" source="3DUoAErpp2HVaNnBFf6h-1" style="endArrow=classic;html=1;rounded=0;exitX=0.468;exitY=0.96;exitDx=0;exitDy=0;entryX=0.468;entryY=0;entryDx=0;entryDy=0;entryPerimeter=0;exitPerimeter=0;labelBackgroundColor=none;fontColor=default;" target="3DUoAErpp2HVaNnBFf6h-3" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="450" y="300" as="sourcePoint" />
+            <mxPoint x="500" y="250" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="3DUoAErpp2HVaNnBFf6h-19" edge="1" parent="1" source="3DUoAErpp2HVaNnBFf6h-14" style="endArrow=classic;html=1;rounded=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;labelBackgroundColor=none;fontColor=default;" target="3DUoAErpp2HVaNnBFf6h-11" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <Array as="points">
+              <mxPoint x="630" y="270" />
+              <mxPoint x="630" y="160" />
+            </Array>
+            <mxPoint x="570" y="270" as="sourcePoint" />
+            <mxPoint x="500" y="300" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="3DUoAErpp2HVaNnBFf6h-20" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;labelBackgroundColor=none;" value="No" vertex="1">
+          <mxGeometry height="30" width="60" x="590" y="210" as="geometry" />
+        </mxCell>
+        <mxCell id="3DUoAErpp2HVaNnBFf6h-21" edge="1" parent="1" source="3DUoAErpp2HVaNnBFf6h-3" style="endArrow=classic;html=1;rounded=0;exitX=0.468;exitY=1.04;exitDx=0;exitDy=0;exitPerimeter=0;labelBackgroundColor=none;fontColor=default;" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="310" y="500" as="sourcePoint" />
+            <mxPoint x="310" y="540" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="3DUoAErpp2HVaNnBFf6h-22" edge="1" parent="1" source="3DUoAErpp2HVaNnBFf6h-4" style="endArrow=classic;html=1;rounded=0;exitX=1;exitY=0.75;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;labelBackgroundColor=none;fontColor=default;" target="3DUoAErpp2HVaNnBFf6h-23" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <Array as="points">
+              <mxPoint x="430" y="510" />
+            </Array>
+            <mxPoint x="470" y="650" as="sourcePoint" />
+            <mxPoint x="310" y="630" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="3DUoAErpp2HVaNnBFf6h-23" parent="1" style="rhombus;whiteSpace=wrap;html=1;fontSize=13;labelBackgroundColor=none;" value="Check whether the PV has&amp;nbsp;&lt;div&gt;enough free space so that It can&amp;nbsp;&lt;/div&gt;&lt;div&gt;accommodate the LVs&amp;nbsp;&lt;/div&gt;&lt;div&gt;being migrated&lt;/div&gt;" vertex="1">
+          <mxGeometry height="190" width="220" x="480" y="390" as="geometry" />
+        </mxCell>
+        <mxCell id="3DUoAErpp2HVaNnBFf6h-24" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;labelBackgroundColor=none;" value="Yes" vertex="1">
+          <mxGeometry height="30" width="60" x="540" y="580" as="geometry" />
+        </mxCell>
+        <mxCell id="3DUoAErpp2HVaNnBFf6h-25" edge="1" parent="1" source="3DUoAErpp2HVaNnBFf6h-23" style="endArrow=classic;html=1;rounded=0;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=1;entryY=0.25;entryDx=0;entryDy=0;labelBackgroundColor=none;fontColor=default;" target="3DUoAErpp2HVaNnBFf6h-1" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <Array as="points">
+              <mxPoint x="590" y="350" />
+            </Array>
+            <mxPoint x="390" y="430" as="sourcePoint" />
+            <mxPoint x="440" y="380" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="3DUoAErpp2HVaNnBFf6h-26" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;labelBackgroundColor=none;" value="No" vertex="1">
+          <mxGeometry height="30" width="60" x="490" y="330" as="geometry" />
+        </mxCell>
+        <mxCell id="3DUoAErpp2HVaNnBFf6h-27" parent="1" style="rhombus;whiteSpace=wrap;html=1;fontSize=13;labelBackgroundColor=none;" value="Migrating data or&lt;div&gt;complete data?&lt;/div&gt;" vertex="1">
+          <mxGeometry height="80" width="170" x="230" y="620" as="geometry" />
+        </mxCell>
+        <mxCell id="3DUoAErpp2HVaNnBFf6h-29" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fontSize=13;labelBackgroundColor=none;" value="we can migrate the complete data from one PV to another PV&lt;div&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;# pvmove /dev/sdb /dev/sdc&lt;/span&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="180" width="120" x="40" y="540" as="geometry" />
+        </mxCell>
+        <mxCell id="3DUoAErpp2HVaNnBFf6h-30" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fontSize=13;labelBackgroundColor=none;" value="&lt;div&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;Migrate LV lv_data using pvmove command migrate data:&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;#pvmove -n lvdata /dev/sdb /dev/sdc&lt;/span&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="70" width="360" x="160" y="750" as="geometry" />
+        </mxCell>
+        <mxCell id="3DUoAErpp2HVaNnBFf6h-31" edge="1" parent="1" source="3DUoAErpp2HVaNnBFf6h-27" style="endArrow=classic;html=1;rounded=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.413;entryY=-0.013;entryDx=0;entryDy=0;entryPerimeter=0;labelBackgroundColor=none;fontColor=default;" target="3DUoAErpp2HVaNnBFf6h-30" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="350" y="770" as="sourcePoint" />
+            <mxPoint x="400" y="720" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="3DUoAErpp2HVaNnBFf6h-32" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;labelBackgroundColor=none;" value="not complete data" vertex="1">
+          <mxGeometry height="30" width="60" x="310" y="710" as="geometry" />
+        </mxCell>
+        <mxCell id="3DUoAErpp2HVaNnBFf6h-33" edge="1" parent="1" source="3DUoAErpp2HVaNnBFf6h-27" style="endArrow=classic;html=1;rounded=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;exitX=0;exitY=0.5;exitDx=0;exitDy=0;labelBackgroundColor=none;fontColor=default;" target="3DUoAErpp2HVaNnBFf6h-29" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="370" y="760" as="sourcePoint" />
+            <mxPoint x="420" y="710" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="3DUoAErpp2HVaNnBFf6h-34" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;labelBackgroundColor=none;" value="complete data" vertex="1">
+          <mxGeometry height="30" width="60" x="160" y="650" as="geometry" />
+        </mxCell>
+        <mxCell id="3DUoAErpp2HVaNnBFf6h-35" edge="1" parent="1" source="3DUoAErpp2HVaNnBFf6h-30" style="endArrow=classic;html=1;rounded=0;exitX=0.465;exitY=1.029;exitDx=0;exitDy=0;exitPerimeter=0;labelBackgroundColor=none;fontColor=default;" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <Array as="points" />
+            <mxPoint x="327" y="830" as="sourcePoint" />
+            <mxPoint x="327" y="860" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="3DUoAErpp2HVaNnBFf6h-36" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fontSize=13;labelBackgroundColor=none;" value="Monitoring&lt;div&gt;# lvs -a -o +devices&lt;/div&gt;" vertex="1">
+          <mxGeometry height="60" width="200" x="235" y="860" as="geometry" />
+        </mxCell>
+        <mxCell id="3DUoAErpp2HVaNnBFf6h-37" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fontSize=13;labelBackgroundColor=none;" value="Removing old PV&amp;nbsp;&lt;div&gt;from PV group&lt;/div&gt;&lt;div&gt;vgreduce vgdata /dev/sdb&lt;/div&gt;" vertex="1">
+          <mxGeometry height="60" width="200" x="500" y="860" as="geometry" />
+        </mxCell>
+        <mxCell id="3DUoAErpp2HVaNnBFf6h-38" edge="1" parent="1" source="3DUoAErpp2HVaNnBFf6h-36" style="endArrow=classic;html=1;rounded=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;labelBackgroundColor=none;fontColor=default;" target="3DUoAErpp2HVaNnBFf6h-37" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="440" y="900" as="sourcePoint" />
+            <mxPoint x="370" y="910" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="3DUoAErpp2HVaNnBFf6h-39" edge="1" parent="1" source="3DUoAErpp2HVaNnBFf6h-29" style="endArrow=classic;html=1;rounded=0;exitX=0.311;exitY=1.007;exitDx=0;exitDy=0;exitPerimeter=0;labelBackgroundColor=none;fontColor=default;" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <Array as="points">
+              <mxPoint x="80" y="890" />
+            </Array>
+            <mxPoint x="410" y="840" as="sourcePoint" />
+            <mxPoint x="238" y="890" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="3DUoAErpp2HVaNnBFf6h-40" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fontSize=13;labelBackgroundColor=none;" value="Keeping backups&amp;nbsp;&lt;div&gt;before migrating&lt;/div&gt;" vertex="1">
+          <mxGeometry height="60" width="160" x="500" y="630" as="geometry" />
+        </mxCell>
+        <mxCell id="3DUoAErpp2HVaNnBFf6h-41" edge="1" parent="1" source="3DUoAErpp2HVaNnBFf6h-23" style="endArrow=classic;html=1;rounded=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.463;entryY=0.044;entryDx=0;entryDy=0;entryPerimeter=0;labelBackgroundColor=none;fontColor=default;" target="3DUoAErpp2HVaNnBFf6h-40" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="360" y="480" as="sourcePoint" />
+            <mxPoint x="410" y="430" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="3DUoAErpp2HVaNnBFf6h-42" edge="1" parent="1" source="3DUoAErpp2HVaNnBFf6h-40" style="endArrow=classic;html=1;rounded=0;exitX=0;exitY=0.5;exitDx=0;exitDy=0;labelBackgroundColor=none;fontColor=default;" target="3DUoAErpp2HVaNnBFf6h-27" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="350" y="650" as="sourcePoint" />
+            <mxPoint x="400" y="600" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="3DUoAErpp2HVaNnBFf6h-43" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;labelBackgroundColor=none;" value="Yes" vertex="1">
+          <mxGeometry height="30" width="60" x="410" y="640" as="geometry" />
+        </mxCell>
+        <mxCell id="3DUoAErpp2HVaNnBFf6h-45" parent="1" style="ellipse;whiteSpace=wrap;html=1;fontSize=13;labelBackgroundColor=none;" value="END" vertex="1">
+          <mxGeometry height="20" width="120" x="260" y="1050" as="geometry" />
+        </mxCell>
+        <mxCell id="3DUoAErpp2HVaNnBFf6h-47" parent="1" style="ellipse;whiteSpace=wrap;html=1;fontSize=13;labelBackgroundColor=none;" value="START" vertex="1">
+          <mxGeometry height="20" width="80" x="240" y="20" as="geometry" />
+        </mxCell>
+        <mxCell id="3DUoAErpp2HVaNnBFf6h-51" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fontSize=13;labelBackgroundColor=none;" value="Verify the migrated PV&amp;nbsp;&lt;div&gt;using pvs command&lt;/div&gt;" vertex="1">
+          <mxGeometry height="60" width="200" x="235" y="940" as="geometry" />
+        </mxCell>
+        <mxCell id="3DUoAErpp2HVaNnBFf6h-52" edge="1" parent="1" source="3DUoAErpp2HVaNnBFf6h-37" style="endArrow=classic;html=1;rounded=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=1.002;entryY=0.622;entryDx=0;entryDy=0;entryPerimeter=0;labelBackgroundColor=none;fontColor=default;" target="3DUoAErpp2HVaNnBFf6h-51" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <Array as="points">
+              <mxPoint x="600" y="980" />
+            </Array>
+            <mxPoint x="350" y="930" as="sourcePoint" />
+            <mxPoint x="440" y="980" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="3DUoAErpp2HVaNnBFf6h-53" edge="1" parent="1" style="endArrow=classic;html=1;rounded=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;labelBackgroundColor=none;fontColor=default;" target="3DUoAErpp2HVaNnBFf6h-45" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="320" y="1002" as="sourcePoint" />
+            <mxPoint x="400" y="950" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="2u66i8spChbQLpPxhFxN-1" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fontSize=13;" value="Prequisites:&lt;div&gt;backups taken&lt;/div&gt;&lt;div&gt;Low I/O window scheduled&lt;/div&gt;&lt;div&gt;New PV has enough free space&lt;/div&gt;&lt;div&gt;Use console/nohup for long pvmove&lt;/div&gt;" vertex="1">
+          <mxGeometry height="80" width="240" x="440" y="20" as="geometry" />
+        </mxCell>
+        <mxCell id="2u66i8spChbQLpPxhFxN-2" edge="1" parent="1" source="3DUoAErpp2HVaNnBFf6h-47" style="endArrow=classic;html=1;rounded=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.25;entryDx=0;entryDy=0;" target="2u66i8spChbQLpPxhFxN-1" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="390" y="140" as="sourcePoint" />
+            <mxPoint x="440" y="90" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="2u66i8spChbQLpPxhFxN-3" edge="1" parent="1" source="2u66i8spChbQLpPxhFxN-1" style="endArrow=classic;html=1;rounded=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="3DUoAErpp2HVaNnBFf6h-2" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <Array as="points">
+              <mxPoint x="560" y="120" />
+              <mxPoint x="440" y="120" />
+              <mxPoint x="420" y="60" />
+              <mxPoint x="310" y="60" />
+            </Array>
+            <mxPoint x="390" y="140" as="sourcePoint" />
+            <mxPoint x="440" y="90" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
