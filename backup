@@ -111,7 +111,7 @@
             <mxPoint x="490" y="530" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="-HQzp7ae8mqv5-1yLKKV-27" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fontSize=13;" value="checking the communication b/w&lt;div&gt;Media Agent-----&amp;gt;Linux&lt;/div&gt;" vertex="1">
+        <mxCell id="-HQzp7ae8mqv5-1yLKKV-27" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fontSize=13;" value="checking the communication b/w&lt;div&gt;Media Agent-----&amp;gt;Linux&lt;/div&gt;&lt;div&gt;&lt;div class=&quot;scriptor-paragraph&quot;&gt;&lt;span&gt;ping&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;-&lt;/span&gt;&lt;span&gt;c&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;4&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;&amp;lt;&lt;/span&gt;&lt;span&gt;client&lt;/span&gt;&lt;span&gt;-&lt;/span&gt;&lt;span&gt;hostname&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;or&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;IP&lt;/span&gt;&lt;span&gt;&amp;gt;&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;" vertex="1">
           <mxGeometry height="60" width="230" x="570" y="440" as="geometry" />
         </mxCell>
         <mxCell id="-HQzp7ae8mqv5-1yLKKV-28" edge="1" parent="1" style="endArrow=classic;html=1;rounded=0;entryX=0.788;entryY=0;entryDx=0;entryDy=0;entryPerimeter=0;" target="-HQzp7ae8mqv5-1yLKKV-21" value="">
